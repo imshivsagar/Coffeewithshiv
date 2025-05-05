@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -19,53 +20,155 @@ nav a {
   text-decoration: none;
 }
 
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #ddd;
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 2em;
   background: #ffe8cc;
 }
 
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #6f4e37;
+}
+
+/* Featured Coffees Section */
+.featured {
+  background: #fff;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 2.5em;
+  margin-bottom: 2em;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2em;
-  gap: 1em;
+  gap: 2em;
 }
 
 .card {
-  background: white;
+  background: #fff;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 200px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-form {
+.card h3 {
+  font-size: 1.5em;
+  color: #6f4e37;
+}
+
+.card p {
+  color: #777;
+}
+
+/* Reviews Section */
+.reviews {
+  background: #fff;
+  padding: 2em;
+  text-align: center;
+}
+
+.reviews blockquote {
+  font-size: 1.2em;
+  color: #6f4e37;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: #ffe8cc;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+.newsletter form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 1em;
-  max-width: 300px;
-  margin: 2em auto;
 }
 
-input, textarea {
-  padding: 0.5em;
-  border: 1px solid #aaa;
+.newsletter input {
+  padding: 0.8em;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  width: 300px;
 }
 
-button {
+.newsletter button {
+  padding: 0.8em;
   background: #6f4e37;
   color: white;
-  padding: 0.5em;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 1em;
-  background: #ddd;
+/* Footer */
+footer p {
+  margin: 0.5em 0;
+}
+
+footer a {
+  color: #6f4e37;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .newsletter input {
+    width: 100%;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
 }
